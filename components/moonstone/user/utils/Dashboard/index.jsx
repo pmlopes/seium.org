@@ -1,9 +1,8 @@
+import { Fragment, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-
+import { useAuth } from "/components/Auth";
 import Return from "/components/moonstone/utils/Return";
 
 const navigation = ["profile", "wheel", "badgedex", "leaderboard", "awards"];
@@ -13,6 +12,7 @@ function classNames(...classes) {
 }
 
 export default function Dashboard(props) {
+  const { logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -120,7 +120,7 @@ export default function Dashboard(props) {
       <div className="hidden md:fixed md:inset-y-0 md:flex md:w-72 md:flex-col">
         <div className="flex min-h-0 flex-1 flex-col bg-secondary">
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
-            <Return ml="4" mt="10" mt_sm="10" />
+            <Return componentStyle="ml-4 mt-10 sm:mt-10" />
             <div className="mt-20 flex flex-shrink-0 items-center px-4">
               <Image
                 src="/images/moonstone-logo.svg"
@@ -134,23 +134,28 @@ export default function Dashboard(props) {
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
-                <a
-                  key={item}
-                  href={item}
-                  className={classNames(
-                    item == props.href
-                      ? "bg-primary text-quinary"
-                      : "text-white hover:bg-primary hover:bg-opacity-50",
-                    "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                  )}
-                >
-                  {item.toUpperCase()}
-                </a>
+                <Link key={item} href={item} passHref>
+                  <a
+                    key={item}
+                    className={classNames(
+                      item == props.href
+                        ? "bg-primary text-quinary"
+                        : "text-white hover:bg-primary hover:bg-opacity-50",
+                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                    )}
+                  >
+                    {item.toUpperCase()}
+                  </a>
+                </Link>
               ))}
             </nav>
-            <Link href="/" className="px-4 font-iregular text-quinary">
+            <a
+              href="#"
+              onClick={() => logout()}
+              className="px-4 font-iregular text-quinary"
+            >
               Log out 👋
-            </Link>
+            </a>
           </div>
         </div>
       </div>
