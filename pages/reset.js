@@ -92,7 +92,7 @@ function Reset() {
                 updatePasswordConfirmation(e.currentTarget.value)
               }
             />
-            <p className="mt-10 mb-10 font-iregular text-red-700 text-center">
+            <p className="mt-10 mb-10 text-center font-iregular text-red-700">
               {errorMsg}
             </p>
             <ImageButton
@@ -106,7 +106,7 @@ function Reset() {
         )}
 
         {success === false && (
-          <p className="mt-10 mb-10 font-iregular text-red-700 text-center">
+          <p className="mt-10 mb-10 text-center font-iregular text-red-700">
             An error has occured. Please try again later
           </p>
         )}
