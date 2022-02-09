@@ -90,6 +90,24 @@ export function AuthProvider({ children }) {
       .finally(() => setLoading(false));
   }
 
+  function resetPassword({ token, password }) {
+    setLoading(true);
+
+    api
+      .reset_password({ token, password })
+      .catch((error) => setErrors(error))
+      .finally(() => setLoading(false));
+  }
+
+  function sendResetEmail({ email }) {
+    setLoading(true);
+
+    api
+      .send_reset_email({ email })
+      .catch((error) => setErrors(error))
+      .finally(() => setLoading(false));
+  }
+
   // Make the provider update only when it should
   const values = useMemo(
     () => ({
@@ -100,6 +118,8 @@ export function AuthProvider({ children }) {
       login,
       logout,
       editUser,
+      resetPassword,
+      sendResetEmail,
     }),
     // eslint-disable-next-line
     [user, isAuthenticated, isLoading, errors]
