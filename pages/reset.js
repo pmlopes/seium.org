@@ -54,7 +54,7 @@ function Reset() {
 
     if (password1 !== password2) updateErrorMsg("The passwords must match");
     else if (!checkPasswordStrength(password1))
-      updateErrorMsg("Your password isn't strong enough. Try FAMILY");
+      updateErrorMsg("The password isn't strong enough");
     else {
       resetPassword({ token, password: password1 });
       updateSuccess(errors === null);

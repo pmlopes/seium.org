@@ -78,7 +78,7 @@ function ForgotPassword() {
           <Text
             text="Don’t have an account?"
             link="Signup here"
-            href="/signup"
+            href="https://sei22.eventbrite.pt"
           />
         )}
 
