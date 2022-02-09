@@ -1,15 +1,31 @@
-import Image from "next/image";
+import { buyAward } from "/lib/api";
 
-export default function Award({ image, cost, available, message, enabled }) {
+export default function Award({ name, id, image, cost, available, message, enabled, updateStore }) {
+
   return (
     <div className="block text-center">
       <div className={enabled ? "opacity-100" : "opacity-50"}>
-        <img src={image} width="200" height="200" alt="Award"/>
+        <img className="mx-auto" src={image} width="200" height="200" alt={name} />
         <div className="mt-8 w-auto">
-          <button className="m-auto block h-20 w-64 rounded-full bg-quinary">
-            <p className="font-ibold font-bold">REDEEM</p>
-            <p className="font-iregular">{cost} tokens 💰</p>
-          </button>
+
+          {enabled ?
+            <button
+              onClick={(e) => buyAward(id)
+                .then((response) => {
+                  console.log(response)
+                  updateStore((needsUpdate) => !needsUpdate)
+                })}
+              className="m-auto block h-20 w-64 rounded-full bg-quinary">
+              <p className="font-ibold font-bold">REDEEM</p>
+              <p className="font-iregular">{cost} tokens 💰</p>
+            </button>
+            :
+            <button
+              className="m-auto block h-20 w-64 rounded-full bg-quinary">
+              <p className="font-ibold font-bold">REDEEM</p>
+              <p className="font-iregular">{cost} tokens 💰</p>
+            </button>
+          }
         </div>
       </div>
 
