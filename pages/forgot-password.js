@@ -36,7 +36,7 @@ function ForgotPassword() {
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20" />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Reset password" />
-        {success != true && (
+        {!success && (
           <div className="mt-8">
             <Form onSubmit={onSubmit}>
               <Input
@@ -67,14 +67,14 @@ function ForgotPassword() {
           </p>
         )}
 
-        {success == true && (
+        {success && (
           <p className="mt-10 font-iregular text-quinary">
             An email has bent sent. Please check your inbox to reset your
             password
           </p>
         )}
 
-        {success != true && (
+        {!success && (
           <Text
             text="Don’t have an account?"
             link="Signup here"

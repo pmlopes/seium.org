@@ -44,19 +44,20 @@ function Reset() {
 
     */
   const [success, updateSuccess] = useState(null);
-  const [password1, updatePassword1] = useState("");
-  const [password2, updatePassword2] = useState("");
+  const [password, updatePassword] = useState("");
+  const [passwordConfirmation, updatePasswordConfirmation] = useState("");
   const [errorMsg, updateErrorMsg] = useState("");
   const { errors, isLoading, resetPassword } = useAuth();
 
   function onSubmit(event) {
     event.preventDefault();
 
-    if (password1 !== password2) updateErrorMsg("The passwords must match");
-    else if (!checkPasswordStrength(password1))
+    if (password !== passwordConfirmation)
+      updateErrorMsg("The passwords must match");
+    else if (!checkPasswordStrength(password))
       updateErrorMsg("The password isn't strong enough");
     else {
-      resetPassword({ token, password: password1 });
+      resetPassword({ token, password });
       updateSuccess(errors === null);
     }
   }
@@ -77,7 +78,7 @@ function Reset() {
               autoComplete="current-password"
               fgColor="white"
               bgColor="primary"
-              onChange={(e) => updatePassword1(e.currentTarget.value)}
+              onChange={(e) => updatePassword(e.currentTarget.value)}
             />
             <Input
               text="CONFIRM PASSWORD"
@@ -87,7 +88,9 @@ function Reset() {
               autoComplete="current-password"
               fgColor="white"
               bgColor="primary"
-              onChange={(e) => updatePassword2(e.currentTarget.value)}
+              onChange={(e) =>
+                updatePasswordConfirmation(e.currentTarget.value)
+              }
             />
             <p className="mt-10 mb-10 font-iregular text-red-700 text-center">
               {errorMsg}
