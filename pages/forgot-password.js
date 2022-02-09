@@ -4,7 +4,7 @@ import ImageButton from "/components/moonstone/utils/ImageButton";
 import Card from "/components/utils/Card";
 
 import { withoutAuth } from "/components/Auth";
-import { useAuth } from "/components/Auth/useAuth"
+import { useAuth } from "/components/Auth/useAuth";
 import { useState } from "react";
 
 import Return from "/components/moonstone/utils/Return";
@@ -36,7 +36,7 @@ function ForgotPassword() {
       <Return componentStyle="sm:ml-14 mt-10 sm:mt-20" />
       <div className="mt-10 flex flex-col items-center justify-center sm:mt-40">
         <Title text="Reset password" />
-        {success != true &&
+        {success != true && (
           <div className="mt-8">
             <Form onSubmit={onSubmit}>
               <Input
@@ -50,37 +50,37 @@ function ForgotPassword() {
                 onChange={(e) => updateEmail(e.currentTarget.value)}
               />
               <ImageButton
-              type="submit"
-              text="LET’S GO"
-              customStyle="text-secondary bg-quinary border-quinary"
-              imageSrc={isLoading ? "/images/loading.gif" : ""}
-              imageAlt="HANG TIGHT..."
-            />
+                type="submit"
+                text="LET’S GO"
+                customStyle="text-secondary bg-quinary border-quinary"
+                imageSrc={isLoading ? "/images/loading.gif" : ""}
+                imageAlt="HANG TIGHT..."
+              />
             </Form>
           </div>
-        }
+        )}
 
-        {success == false &&
+        {success == false && (
           <p className="mt-10 font-iregular text-red-600">
             An error has occured. Please make sure the email you provided is
             correct and try again later
           </p>
-        }
+        )}
 
-        {success == true &&
+        {success == true && (
           <p className="mt-10 font-iregular text-quinary">
             An email has bent sent. Please check your inbox to reset your
             password
           </p>
-        }
+        )}
 
-        {success != true &&
+        {success != true && (
           <Text
             text="Don’t have an account?"
             link="Signup here"
             href="/signup"
           />
-        }
+        )}
 
         <div className="absolute bottom-0 right-60 hidden lg:block">
           <Fade bottom>

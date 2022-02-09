@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { withoutAuth } from "/components/Auth";
-import { useAuth } from "/components/Auth/useAuth"
+import { useAuth } from "/components/Auth/useAuth";
 
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
@@ -33,7 +33,6 @@ export async function getServerSideProps({ query }) {
 }
 
 function Reset() {
-
   const router = useRouter();
   const { token } = router.query;
 
@@ -53,8 +52,7 @@ function Reset() {
   function onSubmit(event) {
     event.preventDefault();
 
-    if (password1 !== password2)
-      updateErrorMsg("The passwords must match");
+    if (password1 !== password2) updateErrorMsg("The passwords must match");
     else if (!checkPasswordStrength(password1))
       updateErrorMsg("Your password isn't strong enough. Try FAMILY");
     else {
@@ -69,7 +67,7 @@ function Reset() {
       <div className="flex flex-col items-center justify-center sm:mt-40">
         <Title text="Recover your password" />
 
-        {success === null &&
+        {success === null && (
           <Form onSubmit={onSubmit}>
             <Input
               text="PASSWORD"
@@ -102,15 +100,15 @@ function Reset() {
               imageAlt="HANG TIGHT..."
             />
           </Form>
-        }
+        )}
 
-        {success === false &&
+        {success === false && (
           <p className="mt-10 mb-10 font-iregular text-red-700 text-center">
             An error has occured. Please try again later
           </p>
-        }
+        )}
 
-        {success === true &&
+        {success === true && (
           <>
             <p className="mt-10 mb-10 font-iregular text-quinary">
               Password reset successfully
@@ -127,7 +125,7 @@ function Reset() {
               </Link>
             </div>
           </>
-        }
+        )}
 
         <div className="absolute bottom-0 right-60 hidden lg:block">
           <Fade bottom>
