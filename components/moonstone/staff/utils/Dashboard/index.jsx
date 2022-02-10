@@ -61,21 +61,26 @@ const MobileNavbar = ({ sidebarOpen, setSidebarOpen }) => {
                 </button>
               </div>
               <nav className="mt-5 flex-1">
-                <button onClick={() => {setSidebarOpen(false); onReedem();}}
-                  className={classNames("w-full text-white hover:bg-primary hover:bg-opacity-50",
-                    "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                  )}
-                >
-                  REDEEM PRIZES
-                </button>
-
-                <button onClick={() => {setSidebarOpen(false); onQr();}}
-                  className={classNames("w-full text-white hover:bg-primary hover:bg-opacity-50",
-                    "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
-                  )}
-                >
-                  SCAN QR CODE
-                </button>
+                <Link href="/sponsor/offline/staff/redeem">
+                  <a
+                    className={classNames(
+                      "w-full text-white hover:bg-primary hover:bg-opacity-50",
+                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                    )}
+                  >
+                    REDEEM PRIZES
+                  </a>
+                </Link>
+                <Link href="/sponsor/offline/staff/staff">
+                  <a
+                    className={classNames(
+                      "w-full text-white hover:bg-primary hover:bg-opacity-50",
+                      "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
+                    )}
+                  >
+                    SCAN QR CODE
+                  </a>
+                </Link>
               </nav>
             </div>
             <div className="flex flex-shrink-0 border-t border-quaternary p-4">
@@ -97,16 +102,19 @@ const MobileNavbar = ({ sidebarOpen, setSidebarOpen }) => {
   );
 };
 
-export default function Dashboard({ title, description, children, onReedem, onQr }) {
+export default function Dashboard({
+  title,
+  description,
+  children,
+  onReedem,
+  onQr,
+}) {
   const { logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div>
-      <MobileNavbar
-        sidebarOpen={sidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-      />
+      <MobileNavbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lg:flex-col">
         <div className="flex min-h-0 flex-1 flex-col bg-secondary">
@@ -116,21 +124,26 @@ export default function Dashboard({ title, description, children, onReedem, onQr
               <Image src="/images/sei-logo.svg" width="220" height="120" />
             </div>
             <nav className="mt-5 flex-1">
-                <button onClick={() => {setSidebarOpen(false); onReedem();}}
-                  className={classNames("w-full text-white hover:bg-primary hover:bg-opacity-50",
+              <Link href="/sponsor/offline/staff/redeem">
+                <a
+                  className={classNames(
+                    "w-full text-white hover:bg-primary hover:bg-opacity-50",
                     "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
                   )}
                 >
                   REDEEM PRIZES
-                </button>
-
-                <button onClick={() => {setSidebarOpen(false); onQr();}}
-                  className={classNames("w-full text-white hover:bg-primary hover:bg-opacity-50",
+                </a>
+              </Link>
+              <Link href="/sponsor/offline/staff/staff">
+                <a
+                  className={classNames(
+                    "w-full text-white hover:bg-primary hover:bg-opacity-50",
                     "group flex items-center border-b-2 border-tertiary border-opacity-50 px-8 py-8 font-ibold text-xs"
                   )}
                 >
                   SCAN QR CODE
-                </button>
+                </a>
+              </Link>
             </nav>
             <a
               href="#"
