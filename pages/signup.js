@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { withoutAuth } from "/components/Auth";
+import { withoutAuth, useAuth } from "/components/Auth";
 import Fade from "react-reveal/Fade";
 
 import Button from "/components/utils/Button";
@@ -21,8 +21,11 @@ function Signup() {
   const [password, updatePassword] = useState("");
   const [passwordConf, updatePasswordConf] = useState("");
 
+  const { sign_up } = useAuth();
+
   const onFinish = e => {
     e.preventDefault();
+    sign_up(name, email, password, passwordConf, username);
   };
 
   return (

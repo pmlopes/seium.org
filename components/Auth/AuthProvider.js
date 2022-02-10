@@ -42,6 +42,15 @@ export function AuthProvider({ children }) {
       .finally(() => setFirstLoading(false));
   }, [token]);
 
+  function sign_up(name, email,password, password_confirmation, username) {
+    api.sign_up(email, password, password_confirmation, 
+      name, username)
+    .then(response => {
+      alert(JSON.stringify(response.data));
+    })
+    //.catch(errors => alert(JSON.stringify(errors)));
+  }
+
   function login({ email, password }) {
     setLoading(true);
 
@@ -106,6 +115,7 @@ export function AuthProvider({ children }) {
       login,
       logout,
       editUser,
+      sign_up
     }),
     // eslint-disable-next-line
     [user, isAuthenticated, isLoading, errors]
