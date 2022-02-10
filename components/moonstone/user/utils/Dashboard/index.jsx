@@ -7,7 +7,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "/components/Auth";
 import Return from "/components/moonstone/utils/Return";
 
-const navigation = ["profile", "wheel", "badgedex", "leaderboard", "awards"];
+const navigation = ["profile", "wheel", "badgedex", "leaderboard", "store"];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -97,7 +97,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
 };
 
 export default function Dashboard({ title, href, description, children }) {
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (

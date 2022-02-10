@@ -9,7 +9,7 @@ import Dashboard from "/components/moonstone/user/utils/Dashboard";
 import Award from "/components/moonstone/user/awards/Award";
 
 function Awards() {
-  const { user } = useAuth();
+  const { user, setUser } = useAuth();
 
   const [awards, setAwards] = useState(null);
   const [needsUpdate, updateStore] = useState(null);
@@ -25,13 +25,13 @@ function Awards() {
   console.log(awards)
 
   return (
-    <Dashboard href="awards"
-      href="awards"
-      title="Awards"
-      description="Win awards with your collected tokens"
+    <Dashboard href="store"
+      href="store"
+      title="Store"
+      description="Buy awards with your collected tokens"
     >
       <div className="lg:grid lg:grid-cols-3 mt-14 border-b-2 border-black">
-        <span className="col-span-1 font-ibold text-xl sm:text-2xl">Achievements</span>
+        <span className="col-span-1 font-ibold text-xl sm:text-2xl">Balance</span>
         <div className="col-span-2 flex lg:flex-row-reverse gap-x-4">
           <span className="text-md font-iregular sm:text-lg">
             💰 {user.token_balance} tokens
@@ -55,6 +55,8 @@ function Awards() {
               message={award.can_buy != 0 ? `You can redeem ${award.can_buy} more` : "You already reached the redeem limit"}
               enabled={award.can_buy != 0}
               updateStore={updateStore}
+              token_balance={user.token_balance}
+              setUser={setUser}
             />
           </div>
         ))}

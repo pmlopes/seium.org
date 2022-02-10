@@ -102,6 +102,7 @@ export function AuthProvider({ children }) {
       user,
       isAuthenticated,
       isLoading,
+      setUser,
       errors,
       login,
       logout,

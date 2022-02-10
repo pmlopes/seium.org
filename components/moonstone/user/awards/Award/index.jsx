@@ -1,7 +1,6 @@
 import { buyAward } from "/lib/api";
 
-export default function Award({ name, id, image, cost, available, message, enabled, updateStore }) {
-
+export default function Award({ name, id, image, cost, available, message, enabled, updateStore, token_balance, setUser}) {
   return (
     <div className="block text-center">
       <div className={enabled ? "opacity-100" : "opacity-50"}>
@@ -12,8 +11,8 @@ export default function Award({ name, id, image, cost, available, message, enabl
             <button
               onClick={(e) => buyAward(id)
                 .then((response) => {
-                  console.log(response)
                   updateStore((needsUpdate) => !needsUpdate)
+                  setUser((oldUser) => ({...oldUser ,token_balance: token_balance - cost}))
                 })}
               className="m-auto block h-20 w-64 rounded-full bg-quinary">
               <p className="font-ibold font-bold">REDEEM</p>
