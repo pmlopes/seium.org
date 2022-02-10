@@ -9,8 +9,7 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "11:00",
@@ -19,8 +18,7 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -79,19 +77,19 @@
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
-        "summary": "",
-        "description": "",
-        "author": "TBA",
+        "summary": "De PEI a empresa",
+        "description": "As a final master's project, at the recently renamed CU of Computer Engineering Project, students are challenged to create and develop a technical project with a solid business base, with the aim of finishing the CU with a project that can be transformed into a real company. In the \"De PEI a Empresa\" talk, we want to address the experiences of those who decided to go ahead with their project and created successful startups and companies, discussing the most unforeseen challenges, the apparently easy processes that turned out to be real battles, the obstacles that were expected difficult but proved to be easy and the most unexpected problems. We want students to have a preview of the future they may have when choosing to walk the path of entrepreneurship, at the end of the master's degree.",
+        "author": "André Santos & Roberto Machado & Helena Moura & José Ramalho",
         "location": "CP2-B1"
       },
       {
         "startTime": "21:00",
         "endTime": "00:00",
-        "activityType": "Social",
+        "activityType": "Geek Night",
         "summary": "",
         "description": "",
-        "author": "TBA",
-        "location": ""
+        "author": "",
+        "location": "Bar Industrial"
       }
     ]
   },
@@ -104,9 +102,9 @@
         "activityType": "Workshop",
         "summary": "Deploying ML Models in Sagemaker",
         "description": "Amazon SageMaker helps data scientists and developers to prepare, build, train, and deploy high-quality machine learning models quickly by bringing together a broad set of capabilities purpose-built for machine learning. To make it easier to get started, Amazon SageMaker JumpStart provides a set of solutions for the most common use cases that can be deployed readily with just a few clicks. In this workshop we will explore the end to end capabilities of sagemaker.",
-        "author": "Karel Roeland Verhoeven - SaltPay",
-        "location": "TBA",
-        "hyperlink": ""
+        "author": "Walid Slim - SaltPay",
+        "location": "Edifício 7 (DI) - 1.09",
+        "hyperlink": "https://workshopsaltpay_sei22.eventbrite.pt"
       },
       {
         "startTime": "09:00",
@@ -115,8 +113,8 @@
         "summary": "Agile HealthCare",
         "description": "How to implement agile methodologies in healthcare software development (Viewer). Team Challenge - Micro Sprint to develop a technological use case in the health area.",
         "author": "André Mota and Catarina Caçote - Glintt",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "Edifício 7 (DI) - 1.10",
+        "hyperlink": "https://workshopglintt_sei22.eventbrite.pt"
       },
       {
         "activityType": "Coffee Break",
@@ -126,11 +124,11 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
+        "summary": "The cloud. A challenge and opportunity for companies.",
+        "description": "The cloud is nowadays one of the main factors of disruption in the global technological landscape. In this session you can see why the cloud is disruptive, what is changing in markets and companies and what is being done to help companies adapt and seize this opportunity.",
+        "author": "Franciso Prata",
         "location": "CP2-B1",
-        "hyperlink": ""
+        "hyperlink": null
       },
       {
         "activityType": "Lunch Break",
@@ -143,18 +141,16 @@
         "summary": "Industry 4.0 or why do we need software in a tire plant?",
         "description": "The 4th industrial revolution is reshaping manufacturing plants around the world. The talk will discuss opportunities and challenges of digitalization in manufacturing using real world examples from Continental Tire plants.",
         "author": "Lars Frische",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "BlockChains and Currencies",
+        "description": "The legacy financial system has many shortcomings and poses many barriers to the transaction of value in our daily life. Cryptocurrencies and decentralized finance (DeFi) are disrupting the status quo with a flurry of technological innovations such as distributed ledgers, blockchains, smart contracts and NFTs. Paving the way to change how we transact value and doing away with the need for a trusted third-party. This talk will provide an overview of these technologies, how they came to be, how they are affecting the world of finance and how we at Uphold play a part in this financial revolution.",
+        "author": "André Coelho",
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -178,20 +174,19 @@
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "Batalha de Paradigmas",
+        "description": "We intend to explore the similarities, differences and future of the two programming paradigms taught in the course: object-oriented and functional. Will one be intrinsically superior to the other, or will it depend on the quality of the programmer? Will they be more appropriate for specific areas and applications, or can both be considered Swiss Army knives? Is discussion of paradigms relevant or obsolete, given the increasing popularity of multi-paradigm languages? We will try to answer these and other questions in a debate that is supposed to be fun and heated.",
+        "author": "TBA",
+        "location": "CP2-B1"
       },
       {
-        "startTime": "21:00",
-        "endTime": "00:00",
+        "startTime": "20:00",
+        "endTime": "22:00",
         "activityType": "Social",
-        "summary": "",
+        "summary": "Jantar Empresarial",
         "description": "",
-        "author": "TBA",
-        "location": ""
+        "author": "Accenture",
+        "location": "Restaurante D. Diogo de Sousa"
       }
     ]
   },
@@ -202,21 +197,21 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "Code Rumble: #Analytics #Financial Risk",
+        "description": "Join us in this coding competition and win prizes. In this challenge we’re going to take you through the technical aspects of financial risk and how these reflect the current market conditions in banking. Bring your own laptop and ensure you have the tools you prefer and enjoy most already installed to write simple algorithms and access a REST API and have fun!",
+        "author": "Cristiano Sousa",
+        "location": "Edifício 7 (DI) - 1.10",
+        "hyperlink": "https://workshopdeloitte_sei22.eventbrite.pt"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "Salesforce Tech Session",
+        "description": "Have you ever heard of Cloud? Salesforce? In this workshop we will present one of the most innovative tools in the technological market. Let's get to know the reality and the impact that Salesforce has on several Accenture clients, through some demos and technical demonstrations.",
+        "author": "António Lemos - Accenture",
+        "location": "Edifício 7 (DI) - 1.09",
+        "hyperlink": "https://workshopaccenture_sei22.eventbrite.pt"
       },
       {
         "activityType": "Coffee Break",
@@ -226,11 +221,10 @@
         "startTime": "11:30",
         "endTime": "12:30",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "Blockchain crash course and why you should care about Web 3.0",
+        "description": "In this talk, we'll explore blockchain technology and its various incarnations since version 1.0 with Bitcoin, version 2.0 with Ethereum and take a look into blockchain 3.0 projects and how they are trying to solve the current limitations of the technology. At the end of the talk, we'll explore the concept of web 3.0 and why you should care! The participants on this talk will be better equipped for the hands-on smart contracts programming workshop.",
+        "author": "Emanuel Mota",
+        "location": "CP2-B1"
       },
       {
         "activityType": "Lunch Break",
@@ -240,11 +234,10 @@
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "Cybersecurity: CID and COVID",
+        "description": "In this talk, we will talk about cybersecurity, legislation in general and, finally, we will delve deeper into how the pandemic has exacerbated existing cybersecurity problems and where we should go based on our experience.",
+        "author": "Ana Ferreira",
+        "location": "CP2-B1"
       },
       {
         "startTime": "15:00",
@@ -253,8 +246,7 @@
         "summary": "Artificial Intelligence in Retail and Intelligent Batch Processing System",
         "description": "From elevating the consumer experience to planning and managing retail operations, artificial intelligence (AI) is innovatively driving the entire retail experience! This session aims to provide an overview of current AI challenges applied to the particularities of the retail area, as well as to explore in more depth an application in the area of ​​operational management: batch processing optimization. In order to respond to these objectives, the problem of developing an intelligent process scheduling system that uses the results of the prediction of their characteristics will be discussed, as well as dynamic multi-criteria optimization techniques, such as meta-heuristics and/or constrained programming. , in order to find an optimal scheduling of batch processes in real time.",
         "author": "Alexandra Oliveira - Retail Consult",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -280,20 +272,26 @@
         "startTime": "17:00",
         "endTime": "18:00",
         "activityType": "Panel Discussion",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "A Developpers Guide to Web3",
+        "description": "In this one, you will learn how you can enter the world of Web3 and get to know all the job opportunities it has to offer, as well as its potential.",
+        "author": "Alexandre Mendes & José Poça & José Resende",
+        "location": "CP2-B1"
       },
       {
         "startTime": "21:00",
         "endTime": "00:00",
         "activityType": "Social",
-        "summary": "",
+        "summary": "Chess Tournament",
         "description": "",
-        "author": "TBA",
-        "location": ""
+        "location": "Online"
+      },
+      {
+        "startTime": "21:00",
+        "endTime": "00:00",
+        "activityType": "Social",
+        "summary": "CS:GO Tournament",
+        "description": "",
+        "location": "Online"
       }
     ]
   },
@@ -304,21 +302,31 @@
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "Blockchain and Smart Contracts in Action! Blockchain and Smart Contracts in Action!",
+        "description": "Let's get our hands dirty and create a Dapp (Decentralized Application) that in the end can be deployed on two different blockchains (Ethereum and Algorand).",
+        "author": "Emanuel Mota & Helder Pinto & Pedro Costa - Yari Labs",
+        "location": "Edifício 7 (DI) - 1.09",
+        "hyperlink": "https://workshopyari_sei22.eventbrite.pt"
       },
       {
         "startTime": "09:00",
         "endTime": "11:00",
         "activityType": "Workshop",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "The role of a developer in a product team",
+        "description": "Álvaro Bezerra, Product Manager @ Subvisual, prepared a workshop based on his experience of working with developers inside product teams. Being part of a product team means much more than just writing code. Learn how you can help yourself while leveraging your own skills and proficiency. This workshop will cover: product team tools and processes; roles and their responsibilities; product mindset and it will last for 90 minutes. It's required that you bring basic writing equipment or laptop.",
+        "author": "Subvisual",
+        "location": "Edifício 7 (DI) - 0.09",
+        "hyperlink": "https://workshopsubvisual_sei22.eventbrite.pt"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "activityType": "Workshop",
+        "summary": "Starting on Big Data with Twitter Streaming DEMO",
+        "description": "In this workshop we will talk about Big Data, its definition and technical concepts, how software engineering handles large volumes of Near Real Time data, its scalability and architecture. In addition, we will bring a demo based on twitter messages, where through Kafka Streams, we were able to capture and process these messages showing interesting views about the events of this social network.",
+        "author": "Bruno Ribeiro - XpandIT",
+        "location": "Edifício 7 (DI) - 1.10",
+        "hyperlink": "https://workshopxpandit_sei22.eventbrite.pt"
       },
       {
         "activityType": "Coffee Break",
@@ -331,8 +339,7 @@
         "summary": "From Blender to the Web - the Journey of a 3D Model",
         "description": "Creating 3D experiences in the web can be something that sounds very daunting. I’m here to remove this idea from your mind and show you that the 3D world is for everyone. For that we will get a model from the 3D software Blender into the web packed with animations, accessibility controls and optimised for web use so join me in this journey as we make the web more awesome.",
         "author": "Sara Vieira",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "activityType": "Lunch Break",
@@ -342,21 +349,19 @@
         "startTime": "14:00",
         "endTime": "15:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "Demythifying AI",
+        "description": "What is artificial intelligence? Is it the next \"big thing\", or should we be careful? If you want to understand how AI works, what neural networks are, how to apply them to different problems, and how to start a career in the area, come watch this talk!",
+        "author": "Telmo Pires",
+        "location": "CP2-B1"
       },
       {
         "startTime": "15:00",
         "endTime": "16:00",
         "activityType": "Talk",
-        "summary": "TBA",
-        "description": "",
-        "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "summary": "How a single NPM package can ruin your business",
+        "description": "The last decade saw the advent of a new application security threat in the form of supply chain vulnerabilities and attacks. These affect not software we create or control, but things we buy, rent or re-use and eventually bundle as part of our stack. From known exploits such as Sunburn to potentially catastrophic ones like Hearthbleed and Log4Shell, these are now part of the zeitgeist and became one of the most sought-after topics for the security community, culminating in a brand new critical category that jumped straight into the top 10 of the latest OWASP report. With the pervasiveness of Open Source and the increasing popularity of easy-to-use package managers and repositories like NPM, the risks have only been exacerbated and the topic became a big concern for everyone, from indie developers to huge Fortune 500 companies. In this talk, we will dive into the history and scope of software supply chain vulnerabilitie and attacks whilst discussing how to mitigate the risks they pose to developers, enterprises and users alike.",
+        "author": "Rui Quelhas",
+        "location": "CP2-B1"
       },
       {
         "activityType": "Coffee Break",
@@ -369,8 +374,7 @@
         "summary": "Closing Session and Prize Announcement",
         "description": "",
         "author": "",
-        "location": "CP2-B1",
-        "hyperlink": ""
+        "location": "CP2-B1"
       },
       {
         "startTime": "21:00",
@@ -379,8 +383,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "Edifício 7 (DI)"
       }
     ]
   },
@@ -394,8 +397,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "Edifício 7 (DI)"
       },
       {
         "activityType": "Lunch Break",
@@ -408,8 +410,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "Edifício 7 (DI)"
       }
     ]
   },
@@ -423,8 +424,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "Edifício 7 (DI)"
       },
       {
         "activityType": "Lunch Break",
@@ -437,8 +437,7 @@
         "summary": "Hackathon (42 hours)",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "Edifício 7 (DI)"
       },
       {
         "startTime": "15:00",
@@ -447,8 +446,7 @@
         "summary": "Hackathon Final Pitches and Closing Session",
         "description": "",
         "author": "",
-        "location": "TBA",
-        "hyperlink": ""
+        "location": "CP2-B1"
       }
     ]
   }

@@ -14,7 +14,6 @@
   margin-left: 10px;
   position: relative;
   transition: 0.5s max-height;
-  max-height: 225px;
 }
 
 .clickable .gridBlock {
@@ -68,9 +67,8 @@
 }
 
 .location {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.4em;
+  margin-top: 0.4em;
 }
 
 .clickable:hover .location {
@@ -87,7 +85,6 @@
 
 .hyperlink {
   position: relative;
-  margin-right: 15px;
 }
 
 .hyperlink:hover {
@@ -101,7 +98,6 @@
 
 .expand {
   @apply items-center rounded-full border border-white px-8 py-0 text-center font-ibold text-3xl text-white shadow-sm;
-  margin-left: 15px;
   display: inline-block;
   width: 5rem;
 }
