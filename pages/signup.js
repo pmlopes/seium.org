@@ -14,7 +14,6 @@ import Title from "/components/moonstone/authentication/Title";
 import Text from "/components/moonstone/authentication/Text";
 
 function Signup() {
-
   const [name, updateName] = useState("");
   const [email, updateEmail] = useState("");
   const [username, updateUsername] = useState("");
@@ -23,7 +22,7 @@ function Signup() {
 
   const { sign_up } = useAuth();
 
-  const onFinish = e => {
+  const onFinish = (e) => {
     e.preventDefault();
     sign_up(name, email, password, passwordConf, username);
   };
@@ -41,7 +40,7 @@ function Signup() {
             name="name"
             fgColor="white"
             bgColor="primary"
-            onChange={e => updateName(e.currentTarget.value)}
+            onChange={(e) => updateName(e.currentTarget.value)}
           />
           <Input
             text="EMAIL"
@@ -51,7 +50,7 @@ function Signup() {
             autoComplete="email"
             fgColor="white"
             bgColor="primary"
-            onChange={e => updateEmail(e.currentTarget.value)}
+            onChange={(e) => updateEmail(e.currentTarget.value)}
           />
           <Input
             text="USERNAME"
@@ -59,7 +58,7 @@ function Signup() {
             name="username"
             fgColor="white"
             bgColor="primary"
-            onChange={e => updateUsername(e.currentTarget.value)}
+            onChange={(e) => updateUsername(e.currentTarget.value)}
           />
           <Input
             text="PASSWORD"
@@ -69,7 +68,7 @@ function Signup() {
             autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
-            onChange={e => updatePassword(e.currentTarget.value)}
+            onChange={(e) => updatePassword(e.currentTarget.value)}
           />
           <Input
             text="CONFIRM PASSWORD"
@@ -79,7 +78,7 @@ function Signup() {
             autoComplete="current-password"
             fgColor="white"
             bgColor="primary"
-            onChange={e => updatePasswordConf(e.currentTarget.value)}
+            onChange={(e) => updatePasswordConf(e.currentTarget.value)}
           />
           <Button
             type="submit"
