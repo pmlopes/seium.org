@@ -14,13 +14,8 @@ export default function QrScanner({onScan, onExit}) {
             }
 
             const uuid = data.slice(url.length);
-            
-            getAttendee(uuid)
-            .then(response => {
-                onScan(response.data);
-                onExit();
-            })
-            .catch(_ => alert("Attendee does not exist"));
+            onScan(uuid);
+            onExit();
         }
     };
 
@@ -30,7 +25,7 @@ export default function QrScanner({onScan, onExit}) {
             onClick={onExit}>X</button>
           <h3 className="w-full mt-5 text-white font-ibold text-2xl text-center bg-transparent absolute z-50">Scan the participant's QR Code</h3>
           <QrReader
-            delay={300}
+            delay={30}
             onError={() => {alert("An error has occured when scanning."); onExit()}}
             onScan={handleScan}
           />
