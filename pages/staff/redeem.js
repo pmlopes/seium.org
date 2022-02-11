@@ -55,6 +55,7 @@ function Reedem() {
   const redeemAwards = () => {
     updateSuccess(true);
     updateStart(true);
+    updateSelectingAwards(false);
     for (let i = 0; i < awards.length; i++) {
       if (amounts[i] != 0) {
         redeem(attendee, awards[i].id, amounts[i])
@@ -63,6 +64,7 @@ function Reedem() {
             alert("An error has occured");
             updateSuccess(false);
             updateStart(false);
+            updateSelectingAwards(true);
           });
       }
     }
@@ -78,11 +80,12 @@ function Reedem() {
             updateScanning(true);
           }}
         >
-          {success && (
-            <p className="font-iregular text-quinary">Redeem successful</p>
-          )}
           <p className="font-ibold font-bold">SCAN QR CODE</p>
         </button>
+      )}
+
+      {start && success && (
+        <p className="font-iregular text-quinary">Redeem successful</p>
       )}
 
       {selectingAwards && (
@@ -101,7 +104,9 @@ function Reedem() {
                 redeemable={entry.not_redeemed}
                 name={entry.name}
                 onValueChange={(e) =>
-                  updateAmounts(changeValue(amounts, id, e.currentTarget.value))
+                  updateAmounts(
+                    changeValue(amounts, id, parseInt(e.currentTarget.value))
+                  )
                 }
               />
             ))}

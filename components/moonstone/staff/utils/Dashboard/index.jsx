@@ -61,7 +61,7 @@ const MobileNavbar = ({ sidebarOpen, setSidebarOpen }) => {
                 </button>
               </div>
               <nav className="mt-5 flex-1">
-                <Link href="/sponsor/offline/staff/redeem">
+                <Link href="/staff/redeem">
                   <a
                     className={classNames(
                       "w-full text-white hover:bg-primary hover:bg-opacity-50",
@@ -71,7 +71,7 @@ const MobileNavbar = ({ sidebarOpen, setSidebarOpen }) => {
                     REDEEM PRIZES
                   </a>
                 </Link>
-                <Link href="/sponsor/offline/staff/staff">
+                <Link href="/staff/badges">
                   <a
                     className={classNames(
                       "w-full text-white hover:bg-primary hover:bg-opacity-50",
@@ -124,7 +124,7 @@ export default function Dashboard({
               <Image src="/images/sei-logo.svg" width="220" height="120" />
             </div>
             <nav className="mt-5 flex-1">
-              <Link href="/sponsor/offline/staff/redeem">
+              <Link href="/staff/redeem">
                 <a
                   className={classNames(
                     "w-full text-white hover:bg-primary hover:bg-opacity-50",
@@ -134,7 +134,7 @@ export default function Dashboard({
                   REDEEM PRIZES
                 </a>
               </Link>
-              <Link href="/sponsor/offline/staff/staff">
+              <Link href="/staff/badges">
                 <a
                   className={classNames(
                     "w-full text-white hover:bg-primary hover:bg-opacity-50",
