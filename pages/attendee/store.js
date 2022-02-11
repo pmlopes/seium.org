@@ -15,12 +15,10 @@ function Store() {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    api
-      .getProducts()
-      .then((response) => {
-        setProducts(response.data);
-      })
-  }, [])
+    api.getProducts().then((response) => {
+      setProducts(response.data);
+    });
+  }, []);
 
   return (
     <Dashboard
@@ -28,7 +26,6 @@ function Store() {
       title="Store"
       description="Buy products with your collected tokens"
     >
-
       <div className="mt-10">
         <Balance
           token_balance={user.token_balance}
@@ -37,31 +34,37 @@ function Store() {
       </div>
 
       <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2 xl:grid-cols-3">
+        {products &&
+          products
+            .filter((a) => a.can_buy > 0)
+            .sort((a, b) => a.name < b.name)
+            .map((product) => (
+              <div key={product.id}>
+                <Product
+                  name={product.name}
+                  id={product.id}
+                  image={product.image}
+                  price={product.price}
+                  enabled={product.can_buy != 0}
+                />
+              </div>
+            ))}
 
-        {products && products.filter(a => a.can_buy > 0).sort((a, b) => a.name < b.name).map(product => (
-          <div key={product.id}>
-            <Product
-              name={product.name}
-              id={product.id}
-              image={product.image}
-              price={product.price}
-              enabled={product.can_buy != 0}
-            />
-          </div>
-        ))}
-
-        {products && products.filter(a => a.can_buy <= 0).sort((a, b) => a.name < b.name).map(product => (
-          <div key={product.id}>
-            <Product
-              name={product.name}
-              id={product.id}
-              image={product.image}
-              price={product.price}
-              enabled={product.can_buy != 0}
-            />
-          </div>
-        ))}
-
+        {products &&
+          products
+            .filter((a) => a.can_buy <= 0)
+            .sort((a, b) => a.name < b.name)
+            .map((product) => (
+              <div key={product.id}>
+                <Product
+                  name={product.name}
+                  id={product.id}
+                  image={product.image}
+                  price={product.price}
+                  enabled={product.can_buy != 0}
+                />
+              </div>
+            ))}
       </div>
     </Dashboard>
   );
