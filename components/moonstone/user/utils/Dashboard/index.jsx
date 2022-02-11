@@ -62,7 +62,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
               </div>
               <nav className="mt-5 flex-1">
                 {navigation.map((item) => (
-                  <Link key={item} href={item} passHref>
+                  <Link key={item} herf={`/attendee/${item}`} passHref>
                     <a
                       className={classNames(
                         item == href
@@ -121,7 +121,7 @@ export default function Dashboard({ title, href, description, children }) {
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (
-                <Link key={item} href={item} passHref>
+                <Link key={item} href={`/attendee/${item}`} passHref>
                   <a
                     key={item}
                     className={classNames(

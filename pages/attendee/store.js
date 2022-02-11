@@ -6,72 +6,58 @@ import * as api from "/lib/api";
 
 import Dashboard from "/components/moonstone/user/utils/Dashboard";
 
-import Award from "/components/moonstone/user/awards/Award";
+import Balance from "/components/moonstone/user/store/Balance";
+import Product from "/components/moonstone/user/store/Product";
 
-function Awards() {
-  const { user, setUser } = useAuth();
+function Store() {
+  const { user } = useAuth();
 
-  const [awards, setAwards] = useState(null);
-  const [needsUpdate, updateStore] = useState(null);
+  const [products, setProducts] = useState(null);
 
   useEffect(() => {
     api
-      .getAwards()
+      .getProducts()
       .then((response) => {
-        setAwards(response.data);
+        setProducts(response.data);
       })
-  }, [needsUpdate])
-
-  console.log(awards)
+  }, [])
 
   return (
-    <Dashboard href="store"
+    <Dashboard
       href="store"
       title="Store"
-      description="Buy awards with your collected tokens"
+      description="Buy products with your collected tokens"
     >
-      <div className="lg:grid lg:grid-cols-3 mt-14 border-b-2 border-black">
-        <span className="col-span-1 font-ibold text-xl sm:text-2xl">Balance</span>
-        <div className="col-span-2 flex lg:flex-row-reverse gap-x-4">
-          <span className="text-md font-iregular sm:text-lg">
-            💰 {user.token_balance} tokens
-          </span>
-          <span className="text-md font-iregular sm:text-lg">
-            🏅 {user.badge_count} badges
-          </span>
-        </div>
+
+      <div className="mt-10">
+        <Balance
+          token_balance={user.token_balance}
+          badge_count={user.badge_count}
+        />
       </div>
 
       <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-8 gap-x-2 lg:grid-cols-2 xl:grid-cols-3">
 
-        {awards && awards.filter(a => a.can_buy > 0).sort((a, b) => a.name < b.name).map(award => (
-          <div key={award.id}>
-            <Award
-              name={award.name}
-              id={award.id}
-              image={award.image}
-              cost={award.price}
-              available={award.stock}
-              message={award.can_buy != 0 ? `You can redeem ${award.can_buy} more` : "You already reached the redeem limit"}
-              enabled={award.can_buy != 0}
-              updateStore={updateStore}
-              token_balance={user.token_balance}
-              setUser={setUser}
+        {products && products.filter(a => a.can_buy > 0).sort((a, b) => a.name < b.name).map(product => (
+          <div key={product.id}>
+            <Product
+              name={product.name}
+              id={product.id}
+              image={product.image}
+              price={product.price}
+              enabled={product.can_buy != 0}
             />
           </div>
         ))}
 
-        {awards && awards.filter(a => a.can_buy <= 0).sort((a, b) => a.name < b.name).map(award => (
-          <div key={award.id}>
-            <Award
-              name={award.name}
-              id={award.id}
-              image={award.image}
-              cost={award.price}
-              available={award.stock}
-              message={award.can_buy != 0 ? `You can redeem ${award.can_buy} more` : "You already reached the redeem limit"}
-              enabled={award.can_buy != 0}
-              updateStore={updateStore}
+        {products && products.filter(a => a.can_buy <= 0).sort((a, b) => a.name < b.name).map(product => (
+          <div key={product.id}>
+            <Product
+              name={product.name}
+              id={product.id}
+              image={product.image}
+              price={product.price}
+              enabled={product.can_buy != 0}
             />
           </div>
         ))}
@@ -81,4 +67,4 @@ function Awards() {
   );
 }
 
-export default withAuth(Awards);
+export default withAuth(Store);
