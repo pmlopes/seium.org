@@ -45,7 +45,6 @@ function Reedem() {
   const getAttendeeAwards = (at) => {
     getReedemable(at)
       .then((response) => {
-        alert(JSON.stringify(response.data));
         updateAwards(response.data);
         updateAmounts(fillArray(response.data.length));
         updateSelectingAwards(true);
@@ -58,9 +57,8 @@ function Reedem() {
     updateStart(true);
     for (let i = 0; i < awards.length; i++) {
       if (amounts[i] != 0) {
-        alert("AQUI");
         redeem(attendee, awards[i].id, amounts[i])
-          .then((_) => alert("SUE"))
+          .then((_) => updateSuccess(true))
           .catch((_) => {
             alert("An error has occured");
             updateSuccess(false);
@@ -123,10 +121,12 @@ function Reedem() {
         <QrScanner
           onScan={(at) => {
             updateAttendee(at);
+            updateStart(false);
             getAttendeeAwards(at);
           }}
           onExit={() => {
             updateScanning(false);
+            updateStart(true);
           }}
         />
       )}

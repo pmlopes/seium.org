@@ -19,24 +19,27 @@ export default function QrScanner({ onScan, onExit }) {
   };
 
   return (
-    <div className="fixed inset-0 h-screen w-screen">
-      <button
-        className="absolute z-50 ml-5 mt-5 w-auto bg-transparent text-center font-ibold text-5xl text-white"
-        onClick={onExit}
-      >
-        X
-      </button>
-      <h3 className="absolute z-50 mt-5 w-full bg-transparent text-center font-ibold text-2xl text-white">
+    <div className="fixed inset-0 h-screen w-screen bg-secondary">
+      <h3 className="relative z-50 mt-5 bg-transparent text-center font-ibold text-lg text-white">
         Scan the participant&apos;s QR Code
       </h3>
-      <QrReader
-        delay={30}
-        onError={() => {
-          alert("An error has occured when scanning.");
-          onExit();
-        }}
-        onScan={handleScan}
-      />
+      <button
+        className="relative z-50 ml-5 mt-5 rounded-full bg-quinary p-4 text-center font-ibold text-3xl text-white"
+        onClick={onExit}
+      >
+        Go back
+      </button>
+      <div className="absolute top-1/2 left-1/2 w-full -translate-y-1/2 -translate-x-1/2">
+        <QrReader
+          delay={30}
+          onError={() => {
+            alert("An error has occured when scanning.");
+            onExit();
+          }}
+          style={{ width: "100%", height: "100%" }}
+          onScan={handleScan}
+        />
+      </div>
     </div>
   );
 }
