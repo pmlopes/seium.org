@@ -27,7 +27,7 @@ export function withAuth(WrappedComponent) {
           return router.replace("/404");
         }
       case USER.ROLES.MANAGER:
-        if (!["/manager/badges", "/manager/wheel"].includes(router.pathname)) {
+        if (!["/manager/badges", "/manager/prizes"].includes(router.pathname)) {
           return router.replace("/404");
         }
       // case USER.ROLES.COMPANY:
