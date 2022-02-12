@@ -4,11 +4,14 @@ import Link from "next/link";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { classNames } from "/lib/css";
 import { useAuth } from "/components/Auth";
 import Return from "/components/moonstone/utils/Return";
 
-const navigation = ["profile", "wheel", "badgedex", "leaderboard", "awards"];
+const navigation = ["badges", "prizes"];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
   return (
@@ -59,7 +62,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
               </div>
               <nav className="mt-5 flex-1">
                 {navigation.map((item) => (
-                  <Link key={item} href={`/attendee/${item}`} passHref>
+                  <Link key={item} href={item} passHref>
                     <a
                       className={classNames(
                         item == href
@@ -111,10 +114,6 @@ export default function Dashboard({ title, href, description, children }) {
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
             <div className="mt-20 flex flex-shrink-0 items-center px-4">
               <Image src="/images/sei-logo.svg" width="220" height="120" />
-            </div>
-            <div className="text-md my-8 px-4 text-white">
-              <p className="font-ibold">You have:</p>
-              <p className="font-iregular">💰 170 Tokens</p>
             </div>
             <nav className="mt-5 flex-1">
               {navigation.map((item) => (

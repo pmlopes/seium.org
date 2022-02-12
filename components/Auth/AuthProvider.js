@@ -42,6 +42,20 @@ export function AuthProvider({ children }) {
       .finally(() => setFirstLoading(false));
   }, [token]);
 
+  function refreshUser() {
+    api
+      .getCurrentUser()
+      .then((response) => {
+        setUser(response);
+      })
+      .catch((_errors) => {
+        // It means the jwt is expired
+        localStorage.clear();
+        delete API.defaults.headers.common["Authorization"];
+        setUser(null);
+      });
+  }
+
   function login({ email, password }) {
     setLoading(true);
 
@@ -59,8 +73,11 @@ export function AuthProvider({ children }) {
             case USER.ROLES.ATTENDEE:
               router.push("/attendee/profile");
               break;
-            case USER.ROLES.COMPANY:
-              router.push("/sponsor/offline/profile");
+            case USER.ROLES.SPONSOR:
+              router.push("/sponsor/scanner");
+              break;
+            case USER.ROLES.MANAGER:
+              router.push("/manager/badges");
               break;
             default:
               throw new Error(`Unknown USER TYPE: ${response.type}`);
@@ -106,6 +123,7 @@ export function AuthProvider({ children }) {
       login,
       logout,
       editUser,
+      refreshUser,
     }),
     // eslint-disable-next-line
     [user, isAuthenticated, isLoading, errors]

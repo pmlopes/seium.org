@@ -1,9 +1,15 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: "360px",
+      ...defaultTheme.screens,
+    },
     rotate: {
       15: "15deg",
       "-180": "-180deg",
@@ -23,6 +29,9 @@ module.exports = {
         tertiary: "#063D66",
         quaternary: "#0085A6",
         quinary: "#36DBEE",
+        success: "#008F05",
+        failure: "#FF4444",
+        warning: "#E09200",
       },
       fontFamily: {
         iblack: ["Inter-Black"],
