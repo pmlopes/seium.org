@@ -89,8 +89,7 @@
         "summary": "",
         "description": "",
         "author": "",
-        "location": "Bar Industrial",
-        "hyperlink": "https://forms.gle/kdTAmCQMJXgHbdGy9"
+        "location": "Bar Industrial"
       }
     ]
   },
@@ -128,7 +127,8 @@
         "summary": "The cloud. A challenge and opportunity for companies.",
         "description": "The cloud is nowadays one of the main factors of disruption in the global technological landscape. In this session you can see why the cloud is disruptive, what is changing in markets and companies and what is being done to help companies adapt and seize this opportunity.",
         "author": "Franciso Prata",
-        "location": "CP2-B1"
+        "location": "CP2-B1",
+        "hyperlink": null
       },
       {
         "activityType": "Lunch Break",
@@ -176,7 +176,7 @@
         "activityType": "Panel Discussion",
         "summary": "Batalha de Paradigmas",
         "description": "We intend to explore the similarities, differences and future of the two programming paradigms taught in the course: object-oriented and functional. Will one be intrinsically superior to the other, or will it depend on the quality of the programmer? Will they be more appropriate for specific areas and applications, or can both be considered Swiss Army knives? Is discussion of paradigms relevant or obsolete, given the increasing popularity of multi-paradigm languages? We will try to answer these and other questions in a debate that is supposed to be fun and heated.",
-        "author": "João Saraiva & JBB & António Nestor",
+        "author": "TBA",
         "location": "CP2-B1"
       },
       {
