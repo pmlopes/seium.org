@@ -7,7 +7,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "/components/Auth";
 import Return from "/components/moonstone/utils/Return";
 
-const navigation = ["profile", "wheel", "badgedex", "leaderboard", "store"];
+const navigation = ["profile", "wheel", "badgedex", "leaderboard", "store", "vault"];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -48,7 +48,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
                   <img
                     className="h-8 w-auto hover:cursor-pointer"
                     src="/images/sei-logo.svg"
-                    alt="Workflow"
+                    alt="Logo"
                   />
                 </Link>
                 <button
@@ -60,7 +60,7 @@ const MobileNavbar = ({ href, sidebarOpen, setSidebarOpen }) => {
                   <FontAwesomeIcon icon={faTimes} />
                 </button>
               </div>
-              <nav className="mt-5 flex-1">
+              <nav className="flex-1">
                 {navigation.map((item) => (
                   <Link key={item} herf={`/attendee/${item}`} passHref>
                     <a
@@ -112,14 +112,14 @@ export default function Dashboard({ title, href, description, children }) {
         <div className="flex min-h-0 flex-1 flex-col bg-secondary">
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-10">
             <Return componentStyle="ml-4 mt-10 sm:mt-10" />
-            <div className="mt-20 flex flex-shrink-0 items-center px-4">
+            <div className="mt-20 mb-2 flex flex-shrink-0 items-center px-4">
               <Image src="/images/sei-logo.svg" width="220" height="120" />
             </div>
-            <div className="text-md my-8 px-4 text-white">
+            <div className="text-md my-6 px-4 text-white">
               <p className="font-ibold">You have:</p>
               <p className="font-iregular">💰 {user.token_balance} Tokens</p>
             </div>
-            <nav className="mt-5 flex-1">
+            <nav className="flex-1">
               {navigation.map((item) => (
                 <Link key={item} href={`/attendee/${item}`} passHref>
                   <a
@@ -139,7 +139,7 @@ export default function Dashboard({ title, href, description, children }) {
             <a
               href="#"
               onClick={() => logout()}
-              className="px-4 font-iregular text-quinary"
+              className="px-4 mt-2 font-iregular text-quinary"
             >
               Log out 👋
             </a>
